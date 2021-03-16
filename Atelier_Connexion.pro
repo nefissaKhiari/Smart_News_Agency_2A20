@@ -3,7 +3,7 @@
 # Project created by QtCreator 2018-10-26T21:45:23
 #
 #-------------------------------------------------
-
+# TRYINGG
 QT       += core gui sql
 CONFIG += console
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
