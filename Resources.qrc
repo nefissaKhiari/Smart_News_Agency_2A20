@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>img/Add-icon.png</file>
+        <file>img/delete-icon.png</file>
+        <file>../120302061_358999538613110_6062834803612643605_n.jpg</file>
+        <file>img/120302061_358999538613110_6062834803612643605_n.jpg</file>
+    </qresource>
+</RCC>
