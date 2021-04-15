@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>img/Add-icon.png</file>
+        <file>img/delete-icon.png</file>
+        <file>img/images.png</file>
+        <file>img/unnamed.png</file>
+        <file>img/user-add-icon---shine-set-add-new-user-add-user-30.png</file>
+        <file>img/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg</file>
+        <file>img/gettyimages-1132439283-640x640.jpg</file>
+        <file>img/bg.png</file>
+        <file>img/stat.jpg</file>
+        <file>img/stat1.png</file>
+        <file>img/images (2).jfif</file>
+        <file>img/images (3).jfif</file>
+        <file>img/images (1).jfif</file>
+        <file>img/ajout.png</file>
+        <file>img/supp.jfif</file>
+        <file>img/loupe.png</file>
+        <file>img/loupe1.jfif</file>
+        <file>img/bgmain.jpg</file>
+        <file>img/main.jpg</file>
+        <file>img/backmain.jpg</file>
+        <file>img/MAINBG.jpg</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>img/images (3).jfif</file>
+    </qresource>
+</RCC>

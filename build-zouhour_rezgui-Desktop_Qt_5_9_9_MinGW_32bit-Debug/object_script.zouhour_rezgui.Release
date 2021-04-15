@@ -1,0 +1,17 @@
+INPUT(
+./release\add_emp.o
+./release\add_mission.o
+./release\connexion.o
+./release\emp.o
+./release\gestion_zouhour.o
+./release\main.o
+./release\mainwindow.o
+./release\mission.o
+./release\stat_mission.o
+./release\qrc_Resources.o
+./release\moc_add_emp.o
+./release\moc_add_mission.o
+./release\moc_gestion_zouhour.o
+./release\moc_mainwindow.o
+./release\moc_stat_mission.o
+);

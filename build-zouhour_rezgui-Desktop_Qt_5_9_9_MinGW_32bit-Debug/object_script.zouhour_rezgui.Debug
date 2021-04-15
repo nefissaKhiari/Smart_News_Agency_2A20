@@ -1,0 +1,17 @@
+INPUT(
+./debug\add_emp.o
+./debug\add_mission.o
+./debug\connexion.o
+./debug\emp.o
+./debug\gestion_zouhour.o
+./debug\main.o
+./debug\mainwindow.o
+./debug\mission.o
+./debug\stat_mission.o
+./debug\qrc_Resources.o
+./debug\moc_add_emp.o
+./debug\moc_add_mission.o
+./debug\moc_gestion_zouhour.o
+./debug\moc_mainwindow.o
+./debug\moc_stat_mission.o
+);
