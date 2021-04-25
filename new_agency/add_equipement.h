@@ -25,6 +25,7 @@ public:
 
     void fill_form(QString);
 
+
 private slots:
     void on_buttonBox_accepted();
 

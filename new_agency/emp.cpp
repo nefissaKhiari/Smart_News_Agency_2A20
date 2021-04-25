@@ -35,6 +35,14 @@ bool emp::ajouter(){
     return    query.exec();
 
 }
+QSqlQueryModel * emp::afficheremp()
+{
+QSqlQueryModel * model= new QSqlQueryModel();
+model->setQuery("select id from employe");
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("client"));
+return model;
+}
+
 
 bool emp::modifier(QString selected){
 
@@ -71,6 +79,15 @@ bool emp::modifier(QString selected){
       query.bindValue(":id", selected);
       return    query.exec();
 
+
+  }
+  bool  emp::voter(int nb,int selected)
+  {    QSqlQuery query;
+
+      query.prepare(" UPDATE EMPLOYE SET nbetoile=:nb where ID= :id");
+      query.bindValue(":id", selected);
+       query.bindValue(":nb",nb);
+        return    query.exec();
 
   }
 

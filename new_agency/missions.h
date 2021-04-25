@@ -15,7 +15,7 @@ public:
     bool modifier(QString);
      QSqlQueryModel * afficher();
       bool supprimer(QString);
-
+     QSqlQueryModel * afficherid();
       QString id, type, description;
 };
 

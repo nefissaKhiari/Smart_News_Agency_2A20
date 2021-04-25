@@ -14,6 +14,7 @@ public:
     bool modifier(QString);
      QSqlQueryModel * afficher();
       bool supprimer(QString);
+      int get_total();
 
       QString id,nom,date,etat;
       double prix;

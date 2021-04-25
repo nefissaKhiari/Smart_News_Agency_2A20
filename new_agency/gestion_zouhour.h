@@ -8,7 +8,7 @@
 #include <QDialog>
 #include <QFileDialog>
 
-
+#include "widget.h"
 #include "missions.h"
 #include "emp.h"
 #include "stat_mission.h"
@@ -98,6 +98,20 @@ private slots:
 
     void on_modif_mission_clicked();
 
+    void on_pushButton_clicked();
+
+    void on_ajouterem_clicked();
+
+    void on_supprimerem_clicked();
+
+    void on_table_em_activated(const QModelIndex &index);
+
+    void on_modifem_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
 private:
     Ui::gestion_zouhour *ui;
     QString selected_emp="",selected_mission="";
@@ -105,6 +119,7 @@ private:
     stat_mission *s;
     Arduino A;
       QByteArray data ;
+
 };
 
 #endif // GESTION_ZOUHOUR_H

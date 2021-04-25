@@ -15,11 +15,13 @@
 #include <QPrintDialog>
 #include <QTextStream>
 
-
+#include "mainwindowvideo.h"
 #include "equipement.h"
 #include "add_equipement.h"
 #include "maintenance.h"
 #include "add_maintenance.h"
+#include <QMediaPlayer>
+#include <QVideoWidget>
 
 namespace Ui {
 class gestion_wael;
@@ -28,7 +30,8 @@ class gestion_wael;
 class gestion_wael : public QMainWindow
 {
     Q_OBJECT
-
+public slots:
+   void clockTimer();
 public:
     explicit gestion_wael(QWidget *parent = nullptr);
     ~gestion_wael();
@@ -67,10 +70,32 @@ private slots:
 
     void on_pushButton_2_clicked();
 
-    void on_actiondeconnecter_triggered();
+   // void on_video_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
+
+  //  void on_pushButton_6_clicked();
+
+   // void on_pushButton_7_clicked();
+
+    void on_play_clicked();
+
+    void on_stop_clicked();
 
 private:
+    MainWindowvideo*video;
     Ui::gestion_wael *ui;
+    QMediaPlayer* player;
+    QVideoWidget* vw;
+      QString filename;
+       QTimer *qTimer;
+       QMediaPlayer * music = new QMediaPlayer();
     QString selected_equipement="",selected_maintenance="";
     int sel_col_equipement=-1,sel_col_maintenance=-1;
 };

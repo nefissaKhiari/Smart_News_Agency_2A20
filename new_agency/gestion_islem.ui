@@ -14,8 +14,9 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 170, 127);
-background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg);</string>
+   <string notr="true">background-image: url(:/new/prefix1/img/maxresdefault.jpg);
+background-image: url(:/new/prefix1/img/maxresdefault.jpg);
+background-color: rgb(230, 0, 0);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTabWidget" name="tabWidget">
@@ -28,9 +29,7 @@ background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/res/img/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg);
-background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg);
-background-color: rgb(255, 170, 127);</string>
+     <string notr="true">background-image: url(:/new/prefix1/img/maxresdefault.jpg);</string>
     </property>
     <property name="tabPosition">
      <enum>QTabWidget::West</enum>
@@ -298,8 +297,7 @@ background-color: rgb(255, 170, 127);</string>
     <string>toolBar</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/res/img/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg);
-background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg);</string>
+    <string notr="true">background-image: url(:/new/prefix1/img/maxresdefault.jpg);</string>
    </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>

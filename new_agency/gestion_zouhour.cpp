@@ -1,19 +1,28 @@
 #include "gestion_zouhour.h"
 #include "ui_gestion_zouhour.h"
-
+#include "qcustomplot.h"
 #include "mainwindow.h"
+#include "widget.h"
+#include "employesmission.h"
 
-
+#include "DuMesengerConnectionDialog.h"
+#include <QTcpSocket>
+#include <QTextStream>
+using namespace DuarteCorporation;
 gestion_zouhour::gestion_zouhour(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::gestion_zouhour)
-{
+{emp e;
+    missions m;
     ui->setupUi(this);
 
     get_missions();
 
     //affichage contenu base
     show_tables();
+     ui->ide2em->setModel(e.afficheremp());
+     ui->ide2em_2->setModel(e.afficheremp());
+    ui->idmem->setModel(m.afficherid());
   //arduino
     int ret=A.connect_arduino();
                 switch(ret){
@@ -33,9 +42,11 @@ gestion_zouhour::~gestion_zouhour()
 }
 
 void gestion_zouhour::show_tables()
-{
+{employesmission mc;
 show_emp();
 show_mission();
+ui->table_em->setModel(mc.afficher());
+
 }
 
 /************************** employe ********************************/
@@ -170,6 +181,13 @@ void gestion_zouhour::on_actionadd_emp_clicked()
           show_emp();
 
            clear_form();
+
+           emp e;
+               missions m;
+//crud grp :ajout id
+                ui->ide2em_2->setModel(e.afficheremp());
+                ui->idmem->setModel(m.afficherid());
+                 ui->ide2em_2->setModel(e.afficheremp());
 }
 
 //get id from selected row
@@ -315,6 +333,11 @@ void gestion_zouhour::on_actionadd_mission_clicked()
           clear_form2();
 
           get_missions();
+          emp e;
+              missions m;
+
+              ui->ide2em_2->setModel(e.afficheremp());
+              ui->idmem->setModel(m.afficherid());
 
 
 }
@@ -391,3 +414,131 @@ ws->show();
 
 
 
+
+void gestion_zouhour::on_pushButton_clicked()
+{
+    widget w;
+    w.exec();
+}
+
+void gestion_zouhour::on_ajouterem_clicked()
+{emp e;
+    missions m;
+
+    ui->ide2em_2->setModel(e.afficheremp());
+    ui->idmem->setModel(m.afficherid());
+    QString s1=ui->id_em->text();
+    QString s2=ui->nom_em->text();
+    QString s3=ui->idmem->currentText();
+    QString s4=ui->ide2em_2->currentText();
+    QString s5=ui->ide2em->currentText();
+
+
+    //ajout
+    employesmission mc(s1,s2,s3,s4,s5);
+    mc.ajouter();
+    ui->table_em->setModel(mc.afficher());
+    //refresh du tableau (affichage)
+
+       ui->ide2em_2->setModel(e.afficheremp());
+       ui->idmem->setModel(m.afficherid());
+    ui->id_em->clear();
+    ui->nom_em->clear();
+    ui->idmem->clear();
+    ui->ideeml2->clear();
+    ui->ide2em->clear();
+}
+
+void gestion_zouhour::on_supprimerem_clicked()
+{emp e;
+    missions m;
+
+    ui->ide2em_2->setModel(e.afficheremp());
+    ui->idmem->setModel(m.afficherid());
+    employesmission mc;
+  QString s1=ui->id_em->text();
+  mc.supprimer(s1);
+  ui->table_em->setModel(mc.afficher());
+
+ //refresh du tableau (affichage)
+  ui->id_em->clear();
+  ui->nom_em->clear();
+  ui->idmem->clear();
+  ui->ideeml2->clear();
+  ui->ide2em->clear();
+}
+
+
+void gestion_zouhour::on_table_em_activated(const QModelIndex &index)
+{QString val;QSqlQuery query;
+    val=ui->table_em->model()->data(index).toString();
+
+     query.prepare("select * from employesmission where id=:val or nom =:val or idmission=:val or idemp1=:val or idemp2=:val");
+     query.bindValue(":val",val);
+
+     if (query.exec())
+     {
+         while (query.next())
+         {
+             ui->id_em->setText(query.value(0).toString());
+             ui->nom_em->setText(query.value(1).toString());
+             ui->idmeml->setText(query.value(2).toString());
+             ui->ideeml->setText(query.value(3).toString());
+             ui->ideeml2->setText(query.value(4).toString());
+
+         }
+     }
+}
+
+void gestion_zouhour::on_modifem_clicked()
+{ emp e;
+    missions m;
+
+    ui->ide2em_2->setModel(e.afficheremp());
+    ui->idmem->setModel(m.afficherid());
+    QString s1=ui->id_em->text();
+    QString s2=ui->nom_em->text();
+    QString s3=ui->idmeml->text();
+    QString s4=ui->ideeml->text();
+    QString s5=ui->ideeml2->text();
+
+    //mofication
+    employesmission mc(s1,s2,s3,s4,s5);
+    mc.modifier(s1);
+    ui->table_em->setModel(mc.afficher());
+
+    //refresh du tableau (affichage)
+
+    ui->id_em->clear();
+    ui->nom_em->clear();
+    ui->idmem->clear();
+    ui->ideeml->clear();
+    ui->ideeml2->clear();
+}
+
+void gestion_zouhour::on_pushButton_2_clicked()
+{emp e;    QMessageBox msgBox;
+
+    int s2=ui->nbetoile->text().toInt();
+     int s1=ui->id->text().toInt();
+    QString s3=ui->nom->text();
+    if(s2<6&&s2>0)
+    {
+    e.voter(s2,s1);
+
+
+    }else
+       {
+         msgBox.setText("il faut que le nombre de vote soit inferieur a 6 et superieur a 0 ");
+         msgBox.exec();
+
+        }
+    show_emp();
+
+}
+
+void gestion_zouhour::on_pushButton_3_clicked()
+{
+    show_emp();
+
+}

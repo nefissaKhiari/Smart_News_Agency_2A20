@@ -15,7 +15,8 @@ public:
     bool modifier(QString);
      QSqlQueryModel * afficher();
       bool supprimer(QString);
-
+      QSqlQueryModel * afficheremp();
+      bool  voter(int nb,int selected);
       QString id, nom, prenom, mail, naissance,occupation,mission;
 
 };

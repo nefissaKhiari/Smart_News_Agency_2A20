@@ -77,7 +77,7 @@ ws->show();
 /*
  ---------------pour tester------------
  username : islem
- mdp : admin ou 1234
+ mdp : admin
  --------------------------------------
 */
 

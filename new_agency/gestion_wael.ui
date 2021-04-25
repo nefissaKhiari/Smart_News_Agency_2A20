@@ -6,30 +6,30 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>738</width>
-    <height>548</height>
+    <width>1002</width>
+    <height>702</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 170, 127);
-background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg);</string>
+   <string notr="true">background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg);
+background-color: rgb(214, 0, 0);
+background-image: url(:/new/prefix1/img/maxresdefault.jpg);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>711</width>
-      <height>461</height>
+      <x>20</x>
+      <y>40</y>
+      <width>901</width>
+      <height>581</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 170, 127);
-background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg);</string>
+     <string notr="true">background-color: rgb(230, 0, 0);</string>
     </property>
     <property name="tabPosition">
      <enum>QTabWidget::West</enum>
@@ -95,7 +95,7 @@ background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-
        </rect>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#d54e21;&quot;&gt;Gestion Equipements&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#e54d30;&quot;&gt;Gestion Equipements&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QComboBox" name="equipement_sel_col">
@@ -138,6 +138,123 @@ background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-
        </property>
       </item>
      </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>410</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>UPLOAD IMAGE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>420</y>
+        <width>131</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>480</y>
+        <width>231</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>24</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>420</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PRIX TOTAL</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>426</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>134</x>
+        <y>475</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>480</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>UPLOAD VIDEO</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Clocklabel">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>10</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="date">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>45</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -146,8 +263,8 @@ background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-
      <widget class="QTableView" name="table_maintenance">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>70</y>
+        <x>-50</x>
+        <y>0</y>
         <width>651</width>
         <height>341</height>
        </rect>
@@ -167,12 +284,12 @@ background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-
        <rect>
         <x>30</x>
         <y>20</y>
-        <width>261</width>
-        <height>31</height>
+        <width>331</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#d54e21;&quot;&gt;Gestion Zones&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#e54d30;&quot;&gt;Gestion Maintenance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="rech_maintenance">
@@ -244,6 +361,45 @@ background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-
        <string>Imprimer</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>450</y>
+        <width>281</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>EXCEL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="play">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>510</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Play</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="stop">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>510</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -252,7 +408,7 @@ background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>738</width>
+     <width>1002</width>
      <height>26</height>
     </rect>
    </property>
@@ -274,17 +430,17 @@ background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-
    <addaction name="separator"/>
    <addaction name="actionadd_maintenance"/>
    <addaction name="actiondelete_maintenance"/>
-   <addaction name="separator"/>
-   <addaction name="actiondeconnecter"/>
   </widget>
   <action name="actionadd_equipement">
    <property name="icon">
-    <iconset>
-     <normaloff>:/res/img/Add-icon.png</normaloff>
-     <normalon>:/new/prefix1/img/Add-icon.png</normalon>:/res/img/Add-icon.png</iconset>
+    <iconset resource="resources.qrc">
+     <normaloff>:/new/prefix1/img/images (2).jfif</normaloff>:/new/prefix1/img/images (2).jfif</iconset>
    </property>
    <property name="text">
     <string>add_equipement</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/new/prefix1/img/images (2).jfif&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+A</string>
@@ -292,12 +448,14 @@ background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-
   </action>
   <action name="actiondelete_equipement">
    <property name="icon">
-    <iconset>
-     <normaloff>:/res/img/delete-icon.png</normaloff>
-     <normalon>:/new/prefix1/img/delete-icon.png</normalon>:/res/img/delete-icon.png</iconset>
+    <iconset resource="resources.qrc">
+     <normaloff>:/new/prefix1/img/images (1).jfif</normaloff>:/new/prefix1/img/images (1).jfif</iconset>
    </property>
    <property name="text">
     <string>delete_equipement</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/new/prefix1/img/images (1).jfif&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+D</string>
@@ -319,23 +477,9 @@ background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-
     <string>Ctrl+Shift+D</string>
    </property>
   </action>
-  <action name="actiondeconnecter">
-   <property name="icon">
-    <iconset>
-     <normaloff>img/Windows-Log-Off-icon.png</normaloff>
-     <normalon>:/new/prefix1/img/Windows-Log-Off-icon.png</normalon>img/Windows-Log-Off-icon.png</iconset>
-   </property>
-   <property name="text">
-    <string>Se deconnecter</string>
-   </property>
-   <property name="toolTip">
-    <string>deconnecter</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+O</string>
-   </property>
-  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

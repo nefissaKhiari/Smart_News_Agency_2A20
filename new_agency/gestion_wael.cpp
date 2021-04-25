@@ -1,13 +1,24 @@
 #include "gestion_wael.h"
 #include "ui_gestion_wael.h"
+#include "mainwindowvideo.h"
+#include <QFile>
+#include <QTimer>
+#include <QDateTime>
+#include <QMediaPlayer>
 
-#include "mainwindow.h"
+
+
+
 
 gestion_wael::gestion_wael(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::gestion_wael)
 {
     ui->setupUi(this);
+    qTimer=new QTimer(this);
+      connect(qTimer,SIGNAL(timeout()),this,SLOT(clockTimer()));
+      qTimer->start(100);
+       music->setMedia(QUrl("C:/Users/Zouhour Rezgui/Downloads/conan.mp3"));
 
     //affichage contenu base
     show_tables();
@@ -28,6 +39,14 @@ void gestion_wael::show_tables()
 
 //************************ crud
 
+void gestion_wael::clockTimer()
+{
+    QTime clockTime=QTime::currentTime();
+    ui->Clocklabel->setText(clockTime.toString(" hh : mm : ss"));
+    QString date = QDate::currentDate().toString();
+    ui->date->setText(date);
+
+}
 //ajout
 void gestion_wael::on_actionadd_equipement_triggered()
 {
@@ -76,6 +95,7 @@ void gestion_wael::on_table_equipement_doubleClicked(const QModelIndex &index)
   QString s3=ac.date();
   QString s4=ac.etat();
   double x=ac.prix();
+
 
     //mofication
     equipement mc(selected_equipement,s2,s3,x,s4);
@@ -282,11 +302,109 @@ void gestion_wael::on_pushButton_2_clicked()
         delete document;
 }
 
-void gestion_wael::on_actiondeconnecter_triggered()
+/*void gestion_wael::on_video_clicked()
 {
-    close();
-        MainWindow *ws;
-    ws = new MainWindow();
-ws->setWindowTitle("News Agency");
-ws->show();
+    player= new QMediaPlayer;
+        vw=new QVideoWidget;
+
+        auto filename=QFileDialog::getOpenFileName(this,"import mp4 file",QDir::rootPath(),"Excel Files(*.mp4)");
+
+
+        player->setVideoOutput(vw);
+        player->setMedia(QUrl::fromLocalFile(filename));
+        vw->setGeometry(100,100,300,400);
+        vw->show();
+}*/
+
+void gestion_wael::on_pushButton_3_clicked()
+{int i=0;
+    filename=QFileDialog::getOpenFileName(this,tr("choose"), "",tr("Images(*.png *.jpg *.jpeg *.bmp *.gif)"));
+    if (QString::compare(filename,QString()) !=0)
+    {
+        QImage image;
+        bool valid=image.load(filename);
+        if (valid)
+        {
+            image=image.scaledToWidth( ui->label_2->width(), Qt::SmoothTransformation);
+            while (i<101) {
+                       ui->progressBar->setValue(i);
+                       QTimer timer;
+                       //        timer.setSingleShot(true);
+                       timer.setInterval(10);
+                       QEventLoop loop;
+                       connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+                       timer.start();
+                       loop.exec();
+                       i++;
+                   }
+            ui->label_2->setPixmap(QPixmap::fromImage(image));
+        }
+        else
+        {
+            qDebug()<<"error";
+        }
+    }
+ ui->progressBar->setValue(0);
+
+}
+
+void gestion_wael::on_pushButton_clicked()
+{  equipement mc;
+    ui->label_3->setNum(mc.get_total());
+    ui->label_5->setText("equipement");
+}
+
+void gestion_wael::on_pushButton_4_clicked()
+{
+    video=new MainWindowvideo(this);
+     video->show();
+}
+
+void gestion_wael::on_pushButton_5_clicked()
+{
+    QTableView *table;
+                  table = ui->table_maintenance;
+                  QString filters("mdb files (*.csv);;All files (*.*)");
+                  QString defaultFilter("mdb files (*.csv)");
+                  QString fileName = QFileDialog::getSaveFileName(0, "Save file", QCoreApplication::applicationDirPath(),
+                                     filters, &defaultFilter);
+                  QFile file(fileName);
+                  QAbstractItemModel *model =  table->model();
+                  if (file.open(QFile::WriteOnly | QFile::Truncate)) {
+                      QTextStream data(&file);
+                      QStringList strList;
+                      for (int i = 0; i < model->columnCount(); i++) {
+                          if (model->headerData(i, Qt::Horizontal, Qt::DisplayRole).toString().length() > 0)
+                              strList.append("\"" + model->headerData(i, Qt::Horizontal, Qt::DisplayRole).toString() + "\"");
+                          else
+                              strList.append("");
+                      }
+                      data << strList.join(";") << "\n";
+                      for (int i = 0; i < model->rowCount(); i++) {
+                          strList.clear();
+                          for (int j = 0; j < model->columnCount(); j++) {
+                              if (model->data(model->index(i, j)).toString().length() > 0)
+                                  strList.append("\"" + model->data(model->index(i, j)).toString() + "\"");
+                              else
+                                  strList.append("");
+                          }
+                          data << strList.join(";") + "\n";
+                      }
+                      file.close();
+                      QMessageBox::information(this,"Exporter To  export","Exporter En  export Avec Succées ");
+                  }
+
+
+}
+//play//
+
+
+void gestion_wael::on_play_clicked()
+{
+     music->play() ;
+}
+
+void gestion_wael::on_stop_clicked()
+{
+     music->stop() ;
 }

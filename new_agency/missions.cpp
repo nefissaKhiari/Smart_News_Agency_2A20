@@ -51,6 +51,14 @@ bool missions::modifier(QString selected){
      return modal;
 
  }
+ QSqlQueryModel * missions::afficherid(){
+
+     QSqlQueryModel * modal=new QSqlQueryModel();
+     modal->setQuery("SELECT id FROM MISSION");
+
+     return modal;
+
+ }
   bool missions::supprimer(QString selected){
 
       QSqlQuery query;

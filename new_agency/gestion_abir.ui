@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-image: url(:/img/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg);
-background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg);
+background-image: url(:/new/prefix1/img/maxresdefault.jpg);
 background-color: rgb(255, 170, 127);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -29,9 +29,8 @@ background-color: rgb(255, 170, 127);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/img/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg);
-background-image: url(:/new/prefix1/img/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg);
-background-color: rgb(255, 170, 127);</string>
+     <string notr="true">background-image: url(:/new/prefix1/img/maxresdefault.jpg);
+background-color: rgb(230, 0, 0);</string>
     </property>
     <property name="tabPosition">
      <enum>QTabWidget::West</enum>
@@ -270,6 +269,10 @@ background-color: rgb(255, 170, 127);</string>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
     <string>toolBar</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/new/prefix1/img/maxresdefault.jpg);
+background-color: rgb(230, 0, 0);</string>
    </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>

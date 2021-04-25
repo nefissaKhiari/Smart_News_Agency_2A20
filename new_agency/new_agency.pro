@@ -1,4 +1,4 @@
-QT       += core gui sql network charts printsupport
+QT       += core gui sql network charts printsupport multimedia multimediawidgets
 QT       +=serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    DuMesengerConnectionDialog.cpp \
     add_archive.cpp \
     add_article.cpp \
     add_carte.cpp \
@@ -35,6 +36,7 @@ SOURCES += \
     commande.cpp \
     connexion.cpp \
     emp.cpp \
+    employesmission.cpp \
     equipement.cpp \
     exportexcelobject.cpp \
     gestion_abir.cpp \
@@ -45,12 +47,16 @@ SOURCES += \
     main.cpp \
     maintenance.cpp \
     mainwindow.cpp \
+    mainwindowvideo.cpp \
     missions.cpp \
+    qcustomplot.cpp \
     smtp.cpp \
     stat_mission.cpp \
-    vente.cpp
+    vente.cpp \
+    widget.cpp
 
 HEADERS += \
+    DuMesengerConnectionDialog.h \
     add_archive.h \
     add_article.h \
     add_carte.h \
@@ -69,6 +75,7 @@ HEADERS += \
     commande.h \
     connexion.h \
     emp.h \
+    employesmission.h \
     equipement.h \
     exportexcelobject.h \
     gestion_abir.h \
@@ -78,12 +85,16 @@ HEADERS += \
     gestion_zouhour.h \
     maintenance.h \
     mainwindow.h \
+    mainwindowvideo.h \
     missions.h \
+    qcustomplot.h \
     smtp.h \
     stat_mission.h \
-    vente.h
+    vente.h \
+    widget.h
 
 FORMS += \
+    DuMesengerConnectionDialog.ui \
     add_archive.ui \
     add_article.ui \
     add_carte.ui \
@@ -100,7 +111,9 @@ FORMS += \
     gestion_wael.ui \
     gestion_zouhour.ui \
     mainwindow.ui \
-    stat_mission.ui
+    mainwindowvideo.ui \
+    stat_mission.ui \
+    widget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

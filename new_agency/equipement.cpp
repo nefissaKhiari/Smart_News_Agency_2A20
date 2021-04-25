@@ -71,3 +71,17 @@ bool equipement::modifier(QString selected){
 
 
   }
+ int equipement::get_total()
+ {
+     QSqlQuery query;
+     query.prepare("SELECT prix FROM equipement ");
+  int total=0;
+     if(query.exec())
+     {
+         while (query.next())
+         {
+             total+=query.value(0).toInt();
+         }
+     }
+     return total;
+ }
