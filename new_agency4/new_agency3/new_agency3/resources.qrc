@@ -1,0 +1,44 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>img/Add-icon.png</file>
+        <file>img/ajout.png</file>
+        <file>img/ajouter article.jpg</file>
+        <file>img/archiver.jpg</file>
+        <file>img/backmain.jpg</file>
+        <file>img/bg.png</file>
+        <file>img/bgmain.jpg</file>
+        <file>img/delete-icon.png</file>
+        <file>img/download.png</file>
+        <file>img/gettyimages-1132439283-640x640.jpg</file>
+        <file>img/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg</file>
+        <file>img/icone-personne-signe-moins-plus-rond_124715-942.jpg</file>
+        <file>img/images (1).jfif</file>
+        <file>img/images (1).png</file>
+        <file>img/images (2).jfif</file>
+        <file>img/images (3).jfif</file>
+        <file>img/images.jfif</file>
+        <file>img/images.png</file>
+        <file>img/loupe.png</file>
+        <file>img/loupe1.jfif</file>
+        <file>img/main.jpg</file>
+        <file>img/MAINBG.jpg</file>
+        <file>img/seo-social-web-network-internet_262_icon-icons.com_61518.png</file>
+        <file>img/stat.jpg</file>
+        <file>img/stat1.png</file>
+        <file>img/supp.jfif</file>
+        <file>img/supprimer archive.jpg</file>
+        <file>img/supprimer article.jpg</file>
+        <file>img/unnamed (1).png</file>
+        <file>img/unnamed.png</file>
+        <file>img/user-add-icon---shine-set-add-new-user-add-user-30.png</file>
+        <file>img/Windows-Log-Off-icon.png</file>
+        <file>img/téléchargement.jfif</file>
+        <file>img/statti.png</file>
+        <file>img/statistic-document.png</file>
+        <file>img/800px_COLOURBOX16103398.jpg</file>
+        <file>img/151232856_1217022955360319_5106535247918888891_n.png</file>
+        <file>img/7471497_preview.png</file>
+        <file>img/pngtree-simple-white-studio-lighting-background-material-image_132104.jpg</file>
+        <file>img/maxresdefault.jpg</file>
+    </qresource>
+</RCC>
