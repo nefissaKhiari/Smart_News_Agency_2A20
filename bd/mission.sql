@@ -1,0 +1,40 @@
+--------------------------------------------------------
+--  Fichier cr�� - mercredi-mai-05-2021   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table MISSION
+--------------------------------------------------------
+
+  CREATE TABLE "ZOUHOUR"."MISSION" 
+   (	"ID" VARCHAR2(20 BYTE), 
+	"TYPE" VARCHAR2(20 BYTE), 
+	"DESCRIPTION" VARCHAR2(20 BYTE)
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "SYSTEM" ;
+REM INSERTING into ZOUHOUR.MISSION
+SET DEFINE OFF;
+Insert into ZOUHOUR.MISSION (ID,TYPE,DESCRIPTION) values ('0256','njj','ghhfvhg');
+Insert into ZOUHOUR.MISSION (ID,TYPE,DESCRIPTION) values ('12564','news','aaaaa');
+Insert into ZOUHOUR.MISSION (ID,TYPE,DESCRIPTION) values ('hdhdjdjdjdj','hsshhs','hshshhshs');
+--------------------------------------------------------
+--  DDL for Index MISSION_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "ZOUHOUR"."MISSION_PK" ON "ZOUHOUR"."MISSION" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  Constraints for Table MISSION
+--------------------------------------------------------
+
+  ALTER TABLE "ZOUHOUR"."MISSION" ADD CONSTRAINT "MISSION_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+ 
+  ALTER TABLE "ZOUHOUR"."MISSION" MODIFY ("ID" NOT NULL ENABLE);
